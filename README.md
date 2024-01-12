@@ -1,6 +1,8 @@
+# What is this project about
+This was the final project for one of my courses in the first year of study at the Computer Science Institute of Charles University in Prague. 
 # Zápočtový program
 
-Úloha je vytvořit hru napodobující původního Pac-Mana. Hru jsem vyráběl v Unity a snažil jsem se zachoval všechny herní mechaniky, pixel art a zvuky z původní hry. Kód je rozdělený do několika C# skriptů, které spolu prostřednictvím Unity komunikují. Nemusel jsem řešit žádné algoritmicky nebo výpočetně náročné úlohy. Hlavní problém byl správně navrhnout, který skript má dělat co a jak spolu mají jednotlivé skripty komunikovat. 
+Úloha je vytvořit hru napodobující původního Pac-Mana. Hru jsem vyráběl v Unity a snažil jsem se zachoval všechny herní mechaniky, pixel art a zvuky z původní hry. Kód je rozdělený do několika C# skriptů, které spolu prostřednictvím Unity komunikují. Nemusel jsem řešit žádné algoritmicky nebo výpočetně náročné úlohy. Hlavní problém byl správný objektový návrh.
 
 ## Uživatelská část dokumentace
 
