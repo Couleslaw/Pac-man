@@ -1,5 +1,6 @@
 # What is this project about
-This was the final project for one of my courses in the first year of study at the Computer Science Institute of Charles University in Prague. 
+This was the final project for one of my courses in the first year of study at the Computer Science Institute of Charles University in Prague. That is the reason why parts of this README are in the Czech language.
+
 # Zápočtový program
 
 Úloha je vytvořit hru napodobující původního Pac-Mana. Hru jsem vyráběl v Unity a snažil jsem se zachoval všechny herní mechaniky, pixel art a zvuky z původní hry. Kód je rozdělený do několika C# skriptů, které spolu prostřednictvím Unity komunikují. Nemusel jsem řešit žádné algoritmicky nebo výpočetně náročné úlohy. Hlavní problém byl správný objektový návrh.
