@@ -283,7 +283,7 @@ PlayerSettings:
       m_Height: 512
       m_Kind: 0
     - serializedVersion: 2
-      m_Icon: {fileID: 0}
+      m_Icon: {fileID: 2800000, guid: 8ae83adc668b5c140961bbc20ccc7742, type: 3}
       m_Width: 256
       m_Height: 256
       m_Kind: 0
@@ -308,7 +308,7 @@ PlayerSettings:
       m_Height: 32
       m_Kind: 0
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: e5ab1e90cb25d4b4e9fb5c9522db0b45, type: 3}
+      m_Icon: {fileID: 2800000, guid: 627369e5d633d5548be6958ce74414ba, type: 3}
       m_Width: 16
       m_Height: 16
       m_Kind: 0
@@ -711,7 +711,8 @@ PlayerSettings:
   scriptingDefineSymbols: {}
   additionalCompilerArguments: {}
   platformArchitecture: {}
-  scriptingBackend: {}
+  scriptingBackend:
+    Standalone: 0
   il2cppCompilerConfiguration: {}
   managedStrippingLevel:
     EmbeddedLinux: 1
