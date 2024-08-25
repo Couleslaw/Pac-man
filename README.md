@@ -5,7 +5,7 @@
 
 ## Game description
 
-Pacman is an arcade game from the 80s where the player controls a character called Pac-Man. The goal is to eat all the dots in the maze and advance to the next level. Meanwhile, four ghosts - Blinky (red), Pinky (pink), Inky (blue), and Clyde (orange) - are trying to catch the player. If Pacman eats a big dot, the ghosts get frightened and become vulnerable. Vulnerable ghosts can be eaten for bonus points. If Pacman eats all four ghosts, he gets an extra life. In each level, a bonus symbol (usually fruit) appears twice, which can be eaten for extra points. After eating all 244 dots, the player advances to the next level, where the ghosts are faster, more aggressive, and vulnerable for a shorter time. The game ends when the player loses all lives.
+Pac-man is an arcade game from the 80s where the player controls a character called Pac-man. The goal is to eat all the dots in the maze and advance to the next level. Meanwhile, four ghosts - Blinky (red), Pinky (pink), Inky (blue), and Clyde (orange) - are trying to catch the player. If Pacman eats a big dot, the ghosts get frightened and become vulnerable. Vulnerable ghosts can be eaten for bonus points. If Pacman eats all four ghosts, he gets an extra life. In each level, a bonus symbol (usually fruit) appears twice, which can be eaten for extra points. After eating all 244 dots, the player advances to the next level, where the ghosts are faster, more aggressive, and vulnerable for a shorter time. The game ends when the player loses all lives.
 
 ## Controls
 
