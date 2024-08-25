@@ -1,32 +1,25 @@
 ## How to play
 
-If you just want to play the game, you can
+- Windows: [download](https://github.com/Couleslaw/Pac-man/releases/latest) the zip file, extract it and run the `.exe` file.
+- Linux and Mac: download the source code, open it in Unity and build the game for your platform.
+
+## Game description
+
+Pacman is an arcade game from the 80s where the player controls a character called Pac-Man. The goal is to eat all the dots in the maze and advance to the next level. Meanwhile, four ghosts - Blinky (red), Pinky (pink), Inky (blue), and Clyde (orange) - are trying to catch the player. If Pacman eats a big dot, the ghosts get frightened and become vulnerable. Vulnerable ghosts can be eaten for bonus points. If Pacman eats all four ghosts, he gets an extra life. In each level, a bonus symbol (usually fruit) appears twice, which can be eaten for extra points. After eating all 244 dots, the player advances to the next level, where the ghosts are faster, more aggressive, and vulnerable for a shorter time. The game ends when the player loses all lives.
+
+## Controls
+
+The player controls Pacman using the arrow keys or WSAD. It is possible to do a pre-turn or post-turn, which means starting the turn a few pixels before (or after) the center of the turn. This allows the player to turn faster than the ghosts.
+
+The game can be paused using `Escape` or `Space`. On the pause screen, there is a button to control the music volume and a button to return to the main menu from where the game can be closed or restarted.
 
 ## The full Pac-man experience
 
-The goal of this project was to create a game that would resemble the original Pac-man game as closely as possible. I used Unity to create the game and tried to keep all the game mechanics, pixel art, and sounds from the original game. The source I used for the game mechanics was [The Pac-Man Dossier](https://pacman.holenet.info/) which is a very detailed description of all the mechanics of the game. I tried to implement everything according to this specification. The only thing I did differently was the collision detection, which I used the built-in Unity collision system for.
+The goal of this project was to create a game that would resemble the original Pac-man game as closely as possible. I used Unity to create the game and tried to keep all the game mechanics, pixel art, and sounds from the original game. The source I used for the game mechanics was [The Pac-Man Dossier](https://pacman.holenet.info/) which is a very detailed description of the game. I tried to implement everything according to this specification. The only thing I did differently was the collision detection, which I used the built-in Unity collision system for.
 
-The player controls a character named Pac-man.
+## Closer look at the game mechanics
 
-# Zápočtový program
-
-Úloha je vytvořit hru napodobující původního Pac-Mana. Hru jsem vyráběl v Unity a snažil jsem se zachoval všechny herní mechaniky, pixel art a zvuky z původní hry. Kód je rozdělený do několika C# skriptů, které spolu prostřednictvím Unity komunikují. Nemusel jsem řešit žádné algoritmicky nebo výpočetně náročné úlohy. Hlavní problém byl správný objektový návrh.
-
-## Uživatelská část dokumentace
-
-### Co je to Pac-Man?
-
-Pacman je hra z osmdesátých let, ve které je hráč spolu se čtyřmi duchy umístěn do bludiště plného teček. Hráč ovládá postavičku se jménem Pac-Man. Cílem je sníst všechny tečky a postoupit do další úrovně. Duchové - Blinky (červený), Pinky (růžový), Inky (modrý) a Clyde (oranžový) - se mezitím snaží hráče chytit. Pokud Pacman sní velkou tečku, tak se duchové vyděsí a na chvíli se stanou zranitelní. Zranitelné duchy je možné sníst a získat tak bonusové body. Pokud Pacman sní všechny čtyři duchy, tak získá život navíc. Také se v každé úrovni dvakrát objeví bonusový symbol (většinou se mu říká ovoce), který je možné sníst pro body navíc. Potom, co hráč sní všech 244 teček, tak postoupí do další úrovně, kde jsou duchové rychlejší, agresivnější a zranitelní po kratší dobu. Hra končí když hráč ztratí poslední život.
-
-### Ovládání
-
-Hráč udává Pacmanův směr pomocí šipek nebo WSAD. Je možné dělat takzvaný pre-turn nebo post-turn, tedy zahájit akci zatáčení pár pixelů před (nebo za) středem odbočky. Díky tomu může hráč zatáčet rychleji než duchové.
-
-Hru je možné pozastavit pomocí `Escape` nebo `Space`. Na pause screen je tlačítko na ovládání hlasitosti hudby a tlačítko pro návrat na úvodní obrazovku.
-
-## Programátorská část dokumentace
-
-Snažil jsem se najít nějaký zdroj informací o původní hře, ze kterého bych mohl vycházet. Našel jsem [The Pac-Man Dossier](https://pacman.holenet.info/), což je velmi podrobný popis všech mechanik této hry. Včetně tabulek udávajících různé parametry v jednotlivých úrovních. Snažil jsem se všechno implementovat podle této specifikace. Jediná věc, kterou jsem udělal jinak, je detekce kolizí, na kterou jsem použil vestavěný kolizní systém Unity. V této části dokumentace se pokusím stručně popsat ty nejdůležitější specifikace hry. Nebudu zabíhat do zbytečných detailů, ty se případně dají dohledat v již zmíněném [The Pac-Man Dossier](https://pacman.holenet.info/). Tato část bude psaná anglicky, protože mi to přijde přirozenější.
+Here I will try to briefly describe the most important specifications of the game. I won't go into unnecessary details, those can be looked up in the already mentioned [The Pac-Man Dossier](https://pacman.holenet.info/) if needed.
 
 ### Game Levels
 
@@ -34,10 +27,10 @@ There are no major changes to the game as the player progresses through the leve
 
 ### Ghost Modes
 
-Ghosts have 4 different modes of behaviour they can be in, which we represent with an enum:
+Ghosts have 4 different modes of behavior:
 
 - Chase - chase after Pacman, every ghosts targets a different tile
-- Scatter - run back into one of the four corners of the maze, every ghost has their favourite one
+- Scatter - run back into one of the four corners of the maze, every ghost has their favorite one
 - Frightened (fright) - move randomly through the maze. Ghosts in this mode can be eaten.
 - Dead - return back to the ghost house. Dead ghosts cannot harm Pacman.
 
@@ -64,7 +57,7 @@ There are 2 types of special zones in the game
 
 ### Ghost House Logic
 
-Blinky starts outside of the house, other ghosts start inside. Ghosts return to the house after being eaten. The leaving priority is as follows: Blinky > Pinky > Inky > Clyde. Blinky always leaves immediately. The other ghosts use dot counters and a timer to determine who should leave next. A special global counter is used after Pacman dies. I recommend reading this [section](https://pacman.holenet.info/#CH2_Home_Sweet_Home) of the Pac-Man Dossier.
+Blinky starts outside of the house, other ghosts start inside. Ghosts return to the house after being eaten. The leaving priority is as follows: Blinky > Pinky > Inky > Clyde. Blinky always leaves immediately. The other ghosts use dot counters and a timer to determine who should leave next. A special global counter is used after Pacman dies. I recommend reading this [section](https://pacman.holenet.info/#CH2_Home_Sweet_Home) of the Pac-Man Dossier for more details.
 
 ### Ghost Movement
 
@@ -85,7 +78,7 @@ Ghosts also use a target tile to return home when they die.
 Ghosts always plan one step into the future.
 If a ghost just entered tile A, then he already knows the next tile he will enter - let's call it B.
 After entering tile A, the ghost chooses a direction he will set once he reaches the center of tile B.
-After reaching the center of tile A, he will set the direction he calculated on the previous tile
+After reaching the center of tile A, he will set the direction he calculated on the previous tile.
 
 Ghosts pick their next tile only based on the euclidean distance between the next tile and the target tile.
 If a ghost has to choose between more tiles that are the same distance from the target tile, then he prefers directions in this order: up, left, down, right.
