@@ -1,3 +1,5 @@
+![gameplay](game-preview.png)
+
 ## How to play
 
 - Windows: [download](https://github.com/Couleslaw/Pac-man/releases/latest) the zip file, extract it and run the `.exe` file.
