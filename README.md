@@ -63,7 +63,7 @@ Blinky starts outside of the house, other ghosts start inside. Ghosts return to 
 
 ### Ghost Movement
 
-The maze is divied into 8x8 pixel tiles. Whenever a ghost is in chase or scatter mode, they are trying to reach a **target tile**. For scatter mode its one of the corners of the maze. Every ghost targets a different tile while in chase mode, but it is always somehow liked to Pacman.
+The maze is divied into 8x8 pixel tiles. Whenever a ghost is in chase or scatter mode, they are trying to reach a **target tile**. For scatter mode its one of the corners of the maze. Every ghost targets a different tile while in chase mode, but it is always somehow linked to Pacman.
 
 - Blinky - directly targets Pacman
 
